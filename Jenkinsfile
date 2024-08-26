@@ -9,7 +9,7 @@ pipeline{
     }
 
     parameters {
-        string(name: 'app_version', defaultValue: '', descriptions: 'Application Version to build')
+        string(name: 'app_version', defaultValue: '', description: 'Application Version to build')
     }
 
 // Setting up fixed values as environmental variables 
