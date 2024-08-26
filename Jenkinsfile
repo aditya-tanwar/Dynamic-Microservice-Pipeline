@@ -61,7 +61,7 @@ pipeline{
 
                                     stage ("Docker-Image-Build") {
                                         echo "build"
-                                        sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/"
+                                        sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/Dockerfile"
 
                                     }
 
