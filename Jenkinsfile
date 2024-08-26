@@ -57,14 +57,14 @@ pipeline{
                         parallelStages["${microservice}"] = {
                             stage ("${microservice}") {
                                 echo "${microservice}"
-                                script{
+                                //script{
 
-                                    stage ("Docker-Image-Build") {
-                                        echo "build"
-                                        sh "ls && pwd"
-                                        sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/"
+                                    // stage ("Docker-Image-Build") {
+                                    //     echo "build"
+                                    //     sh "ls && pwd"
+                                    //     sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/"
 
-                                    }
+                                    // }
 
                                     // stage ("Docker-Image-Scan") {
                                     //     sh '''
@@ -90,7 +90,7 @@ pipeline{
                                     //     //sh 'docker push ${NEXUS_URL}/log-message-processor-$(date +"%F"):v${app_version}'
                                     //     //}   
                                     // }
-                                }
+                                //}
                             }
                         }
                         parallel parallelStages
