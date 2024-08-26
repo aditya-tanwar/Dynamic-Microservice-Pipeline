@@ -1,4 +1,12 @@
-test1
-test2
-test3
-test4
+adservice
+cartservice
+checkoutservice
+currencyservice
+emailservice
+frontend
+loadgenerator
+paymentservice
+productcatalogservice
+recommendationservice
+shippingservice
+shoppingassistantservice
