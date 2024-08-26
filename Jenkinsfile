@@ -23,7 +23,7 @@ pipeline{
 
         stage ('Git-Checkout') {
             steps {
-                git credentialsId: 'git', poll: false, url: 'https://github.com/aditya-tanwar/Microservice-Dynamic-Pipeline.git', branch: env.BRANCH_NAME
+                git credentialsId: 'git', poll: false, url: 'https://github.com/aditya-tanwar/Dynamic-Microservice-Pipeline.git', branch: env.BRANCH_NAME
             }
         }
 
