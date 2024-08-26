@@ -94,7 +94,7 @@ pipeline{
                             }
                         }
                         
-                    }
+                    } // end of microservices.each 
                     parallel parallelStages
                 }
             }
