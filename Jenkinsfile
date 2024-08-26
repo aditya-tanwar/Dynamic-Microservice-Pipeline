@@ -24,7 +24,7 @@ pipeline{
         stage ('Git-Checkout') {
             steps {
                 git credentialsId: 'git', poll: false, url: 'https://github.com/aditya-tanwar/Dynamic-Microservice-Pipeline.git', branch: env.BRANCH_NAME
-                mkdir TEST-RESULTS
+                sh "mkdir TEST-RESULTS"
             }
         }
 
