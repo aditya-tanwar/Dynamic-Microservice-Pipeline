@@ -63,9 +63,9 @@ pipeline{
                                         echo "build"
                                         sh "ls && pwd"
                                         //sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/"
-                                        sh '''
+                                        sh ''
                                             echo "${microservice}" && echo params.microservice && echo param.microservice
-                                        '''
+                                        ''
 
                                     } // End of Docker-Image-Build block
 
