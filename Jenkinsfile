@@ -93,8 +93,9 @@ pipeline{
                                 //}
                             }
                         }
-                        parallel parallelStages
+                        
                     }
+                    parallel parallelStages
                 }
             }
         } // End of Dynamic Pipeline stage
