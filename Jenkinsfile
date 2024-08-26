@@ -19,6 +19,16 @@ pipeline{
 
     stages {
 
+// Cleaning Workspace 
+
+        stage("Cleaning the Workspace before starting further steps"){
+            steps{
+                cleanWs() // This is a jenkins inbuild function that is used to clean the workspace.
+            }
+        } // End of the Cleaning Workspace stage
+
+
+
     // Git Checkout 
 
         stage ('Git-Checkout') {
