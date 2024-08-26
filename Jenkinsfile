@@ -61,14 +61,14 @@ pipeline{
                                 script{
 
                                     stage ("Docker-Image-Build") {
-                                        sh "docker build -t ${microservice}-`date +'%F'`:v1 src/${microservice}/"
+                                        sh "docker build -t ${microservice}-`date +'%F'`:v${app_version} src/${microservice}/"
 
                                     } // End of Docker-Image-Build block
 
                                     stage ("Docker-Image-Scan") {
                                          sh """
-                                             trivy image --scanners vuln,misconfig,secret ${microservice}-$(date +"%F"):v${app_version} --format json -o TEST-RESULTS/trivy-${microservice}-$(date +"%F")-v${app_version}.json
-                                             dockle -f json ${microservice}-$(date +"%F"):v${app_version} > TEST-RESULTS/dockle-${microservice}-$(date +"%F")-v${app_version}.json
+                                             trivy image --scanners vuln,misconfig,secret ${microservice}-`date +'%F'`:v${app_version} --format json -o TEST-RESULTS/trivy-${microservice}-`date +'%F'`-v${app_version}.json
+                                             dockle -f json ${microservice}-`date +'%F'`:v${app_version} > TEST-RESULTS/dockle-${microservice}-`date +'%F'`-v${app_version}.json
                                          """
                                      }
 
